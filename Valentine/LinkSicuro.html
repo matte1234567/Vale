@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Prova</title>
+</head>
+<body style="margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+        <img id="fotoGatto" src="C:\Users\matte\Downloads\Gatto.jpg" style="width: 300px; height: auto; margin-bottom: 10px;"/>
+
+        <h1 style="font-family: sans-serif; margin-bottom: 20px;">Will you be my valentine?</h1>
+
+        <div style="display: flex; gap: 10px;">
+            <button id="btnYes" style="padding: 10px 20px; cursor: pointer;">Yes</button>
+            <button id="btnNo" style="padding: 10px 20px; cursor: pointer;">No</button>
+        </div>
+
+        <p id="risposta" style="margin-top: 15px; font-family: sans-serif; font-weight: bold; min-height: 1.5em;"></p>
+
+    </div>
+
+    <script>
+        const testoRisposta = document.getElementById('risposta');
+        const tastoNo = document.getElementById('btnNo');
+        const tastoSi = document.getElementById('btnYes');
+        const immagine = document.getElementById('fotoGatto');
+
+        tastoNo.onclick = function() {
+            testoRisposta.innerText = "Sicura di aver premuto il tasto giusto?";
+            testoRisposta.style.color = "#555";
+            immagine.src = "C:/Users/matte/Downloads/SadCat.jpg";
+        };
+
+        tastoSi.onclick = function() {
+            testoRisposta.innerText = "iuppii";
+            testoRisposta.style.color = "#555";
+            immagine.src = "C:/Users/matte/Downloads/GifFuochi.gif";
+        };
+    </script>
+</body>
+</html>
